@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/close.svg</file>
+        <file>images/close_hover.svg</file>
+    </qresource>
+</RCC>

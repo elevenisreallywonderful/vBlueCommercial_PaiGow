@@ -17,7 +17,8 @@ SOURCES += \
 HEADERS += \
     basewindow.h \
     loginwindow.h \
-    mainview.h
+    mainview.h \
+    ripplebuttonblue.h
 
 FORMS += \
     loginwindow.ui \

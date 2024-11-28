@@ -17,6 +17,16 @@ public:
     explicit LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
 
+    enum LoginPageIndex{
+        Login = 0,
+        Register,
+        ChangePassword,
+        Recharge
+    };
+
+private slots:
+    void on_goSignupBtn_clicked();
+
 private:
     Ui::LoginWindow *ui;
 };

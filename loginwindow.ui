@@ -26,7 +26,8 @@
 }
 
 /* Header label styling */
-#signinHeaderLabel {
+#signinHeaderLabel,
+#signupHeaderLabel {
     width: 300px;
     height: 44px;
     background-color: transparent;
@@ -36,7 +37,10 @@
 
 /* Input field styling */
 #signinUsernameEdit,
-#signinPasswordEdit {
+#signinPasswordEdit,
+#signupUsernameEdit,
+#signupPasswordEdit
+ {
     width: 271px;
     height: 38px;
     padding: 2px 25px 2px 2px;
@@ -54,7 +58,8 @@
 }
 
 /* Sign-in button styling */
-#signinBtn {
+#signinBtn,
+#signupBtn {
     width: 298px;
     height: 42px;
     border-radius: 2px;
@@ -64,17 +69,19 @@
 }
 
 /* Sign-in button hover effect */
-#signinBtn:hover {
+#signinBtn:hover,
+#signupBtn:hover {
     background-color: #4093ff;
 }
 
 /* Sign-in button pressed effect */
-#signinBtn:pressed {
+#signinBtn:pressed,
+#signupBtn:pressed {
     background-color: #0063e5;
 }
 
 /* Charge button styling */
-#chargeBtn {
+#goChargeBtn {
     width: 298px;
     height: 42px;
     border-radius: 2px;
@@ -84,17 +91,17 @@
 }
 
 /* Charge button hover effect */
-#chargeBtn:hover {
+#goChargeBtn:hover {
     color: #2785ff;
 }
 
 /* Charge button active effect */
-#chargeBtn:pressed {
+#goChargeBtn:pressed {
     color: #006fff;
 }
 
 /* Sign-up button styling */
-#signupBtn {
+#goSignupBtn {
     width: 60px;
     height: 16px;
     border: 0;
@@ -105,12 +112,12 @@
 }
 
 /* Sign-up button when disabled */
-#signupBtn:disabled {
+#goSignupBtn:disabled {
     color: #909399;
 }
 
 /* Change password button styling */
-#changePasswordBtn {
+#goChangePasswordBtn {
     width: 60px;
     height: 16px;
     border: 0;
@@ -120,12 +127,29 @@
 }
 
 /* Change password button when disabled */
-#changePasswordBtn:disabled {
+#goChangePasswordBtn:disabled {
     color: #909399;
 }
 
-#rememberPasswordCheckBox {
- 	font-size: 12px;
+
+#label,
+#label2 ,
+#rememberPasswordCheckBox
+{
+ 	color: #606266;
+	font-size: 12px;
+}
+
+#policyBtn,
+#userAgreeBtn {
+	color: #2359ff;
+	border: 0;
+	font-size: 12px;
+}
+
+#signupBackBtn {
+	border: 0;
+	border-image: url(:/images/back.svg);
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -317,7 +341,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="changePasswordBtn">
+          <widget class="QPushButton" name="goChangePasswordBtn">
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
            </property>
@@ -342,7 +366,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="chargeBtn">
+        <widget class="QPushButton" name="goChargeBtn">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
@@ -367,7 +391,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="signupBtn">
+          <widget class="QPushButton" name="goSignupBtn">
            <property name="maximumSize">
             <size>
              <width>69</width>
@@ -412,6 +436,186 @@
           </size>
          </property>
         </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="signupPage">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>11</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>29</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signupBackBtn">
+           <property name="maximumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="signupHeaderLabel">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>44</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>注册</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="signupUsernameEdit">
+           <property name="placeholderText">
+            <string>请输入账号</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="signupPasswordEdit">
+           <property name="placeholderText">
+            <string>请输入密码</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="termofServiceCheckBox">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>我已阅读并接受 </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="userAgreeBtn">
+             <property name="text">
+              <string>用户协议</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label2">
+             <property name="text">
+              <string>和</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="policyBtn">
+             <property name="text">
+              <string>隐私政策</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signupBtn">
+           <property name="text">
+            <string>注册</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>

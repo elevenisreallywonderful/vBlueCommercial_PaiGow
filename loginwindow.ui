@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
+    <width>364</width>
     <height>425</height>
    </rect>
   </property>
@@ -52,6 +52,15 @@ QLineEdit:disabled {
     background-color: #f0f0f0;
 }
 
+QLineEdit:hover { 
+ border-color: #3180ff; 
+}
+
+/* Border color when QLineEdit is focused */
+QLineEdit:focus {
+    border: 1px solid #3180ff; /* Set border color to green when focused */
+}
+
 /* Sign-in button styling */
 #signinBtn,
 #signupBtn,
@@ -71,13 +80,6 @@ QLineEdit:disabled {
 #rechargeBtn:hover
 #changepasswordBtn:hover {
     background-color: #4093ff;
-}
-
-/* Sign-in button pressed effect */
-#signinBtn:pressed,
-#signupBtn:pressed,
-#changepasswordBtn {
-    background-color: #0063e5;
 }
 
 /* Charge button styling */
@@ -151,7 +153,8 @@ QLineEdit:disabled {
 #changepasswordBackBtn {
 	border: 0;
 	border-image: url(:/images/back.svg);
-}</string>
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <property name="spacing">
@@ -357,7 +360,7 @@ QLineEdit:disabled {
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="signinBtn">
+        <widget class="AirplaneButton" name="signinBtn">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
@@ -597,7 +600,7 @@ QLineEdit:disabled {
           </layout>
          </item>
          <item>
-          <widget class="QPushButton" name="signupBtn">
+          <widget class="AirplaneButton" name="signupBtn">
            <property name="text">
             <string>注册</string>
            </property>
@@ -720,7 +723,7 @@ QLineEdit:disabled {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="changepasswordBtn">
+          <widget class="AirplaneButton" name="changepasswordBtn">
            <property name="text">
             <string>修改密码</string>
            </property>
@@ -836,7 +839,7 @@ QLineEdit:disabled {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="rechargeBtn">
+          <widget class="AirplaneButton" name="rechargeBtn">
            <property name="text">
             <string>充值</string>
            </property>
@@ -863,6 +866,13 @@ QLineEdit:disabled {
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AirplaneButton</class>
+   <extends>QPushButton</extends>
+   <header>ripplebuttonblue.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

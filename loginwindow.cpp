@@ -12,3 +12,9 @@ LoginWindow::~LoginWindow()
 {
     delete ui;
 }
+
+void LoginWindow::on_goSignupBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::Register);
+}
+

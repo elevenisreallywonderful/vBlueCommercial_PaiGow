@@ -27,6 +27,16 @@ public:
 private slots:
     void on_goSignupBtn_clicked();
 
+    void on_goChangePasswordBtn_clicked();
+
+    void on_changepasswordBackBtn_clicked();
+
+    void on_signupBackBtn_clicked();
+
+    void on_goChargeBtn_clicked();
+
+    void on_rechargeBackBtn_clicked();
+
 private:
     Ui::LoginWindow *ui;
 };

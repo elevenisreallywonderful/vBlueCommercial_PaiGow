@@ -18,3 +18,21 @@ void LoginWindow::on_goSignupBtn_clicked()
     ui->stackedWidget->setCurrentIndex(LoginPageIndex::Register);
 }
 
+
+void LoginWindow::on_goChangePasswordBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::ChangePassword);
+}
+
+
+void LoginWindow::on_changepasswordBackBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::Login);
+}
+
+
+void LoginWindow::on_signupBackBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::Login);
+}
+

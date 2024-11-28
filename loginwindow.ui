@@ -27,7 +27,8 @@
 
 /* Header label styling */
 #signinHeaderLabel,
-#signupHeaderLabel {
+#signupHeaderLabel,
+#changePasswordHeaderLabel {
     width: 300px;
     height: 44px;
     background-color: transparent;
@@ -35,12 +36,8 @@
 	font-size: 16px;
 }
 
-/* Input field styling */
-#signinUsernameEdit,
-#signinPasswordEdit,
-#signupUsernameEdit,
-#signupPasswordEdit
- {
+QLineEdit
+{
     width: 271px;
     height: 38px;
     padding: 2px 25px 2px 2px;
@@ -51,15 +48,14 @@
     text-align: left;
 }
 
-/* Input fields when disabled */
-#signinUsernameEdit:disabled,
-#signinPasswordEdit:disabled {
+QLineEdit:disabled {
     background-color: #f0f0f0;
 }
 
 /* Sign-in button styling */
 #signinBtn,
-#signupBtn {
+#signupBtn,
+#changepasswordBtn {
     width: 298px;
     height: 42px;
     border-radius: 2px;
@@ -70,13 +66,15 @@
 
 /* Sign-in button hover effect */
 #signinBtn:hover,
-#signupBtn:hover {
+#signupBtn:hover,
+#changepasswordBtn {
     background-color: #4093ff;
 }
 
 /* Sign-in button pressed effect */
 #signinBtn:pressed,
-#signupBtn:pressed {
+#signupBtn:pressed,
+#changepasswordBtn {
     background-color: #0063e5;
 }
 
@@ -131,7 +129,6 @@
     color: #909399;
 }
 
-
 #label,
 #label2 ,
 #rememberPasswordCheckBox
@@ -147,7 +144,8 @@
 	font-size: 12px;
 }
 
-#signupBackBtn {
+#signupBackBtn,
+#changepasswordBackBtn {
 	border: 0;
 	border-image: url(:/images/back.svg);
 }</string>
@@ -604,6 +602,129 @@
          </item>
          <item>
           <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="changepasswordPage">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>30</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="changepasswordBackBtn">
+           <property name="maximumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="changePasswordHeaderLabel">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>44</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>修改密码</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="changepasswordUsernameEdit">
+           <property name="placeholderText">
+            <string>请输入原密码</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="changepasswordPasswordEdit">
+           <property name="placeholderText">
+            <string>请输入新密码</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="changepasswordConfirmEdit">
+           <property name="placeholderText">
+            <string>请确认新密码</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="changepasswordBtn">
+           <property name="text">
+            <string>修改密码</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>

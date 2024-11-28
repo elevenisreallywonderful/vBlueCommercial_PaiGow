@@ -55,6 +55,7 @@ QLineEdit:disabled {
 /* Sign-in button styling */
 #signinBtn,
 #signupBtn,
+#rechargeBtn,
 #changepasswordBtn {
     width: 298px;
     height: 42px;
@@ -67,7 +68,8 @@ QLineEdit:disabled {
 /* Sign-in button hover effect */
 #signinBtn:hover,
 #signupBtn:hover,
-#changepasswordBtn {
+#rechargeBtn:hover
+#changepasswordBtn:hover {
     background-color: #4093ff;
 }
 
@@ -145,6 +147,7 @@ QLineEdit:disabled {
 }
 
 #signupBackBtn,
+#rechargeBackBtn,
 #changepasswordBackBtn {
 	border: 0;
 	border-image: url(:/images/back.svg);
@@ -443,13 +446,13 @@ QLineEdit:disabled {
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>11</number>
+        <number>9</number>
        </property>
        <property name="topMargin">
-        <number>10</number>
+        <number>9</number>
        </property>
        <property name="rightMargin">
-        <number>29</number>
+        <number>30</number>
        </property>
        <property name="bottomMargin">
         <number>0</number>
@@ -725,6 +728,122 @@ QLineEdit:disabled {
          </item>
          <item>
           <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="rechargePage">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>30</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="rechargeBackBtn">
+           <property name="maximumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="rechargeHeaderLabel">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>44</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>充值</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="rechargeUsernameEdit">
+           <property name="placeholderText">
+            <string>请输入账号</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="rechargePasswordEdit">
+           <property name="placeholderText">
+            <string>请输入卡密</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="rechargeBtn">
+           <property name="text">
+            <string>充值</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_8">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>

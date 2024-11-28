@@ -33,6 +33,10 @@ private slots:
 
     void on_signupBackBtn_clicked();
 
+    void on_goChargeBtn_clicked();
+
+    void on_rechargeBackBtn_clicked();
+
 private:
     Ui::LoginWindow *ui;
 };

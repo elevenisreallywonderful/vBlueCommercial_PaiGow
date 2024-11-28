@@ -36,3 +36,15 @@ void LoginWindow::on_signupBackBtn_clicked()
     ui->stackedWidget->setCurrentIndex(LoginPageIndex::Login);
 }
 
+
+void LoginWindow::on_goChargeBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::Recharge);
+}
+
+
+void LoginWindow::on_rechargeBackBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(LoginPageIndex::Login);
+}
+
